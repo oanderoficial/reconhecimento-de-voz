@@ -1,0 +1,106 @@
+import pyttsx3
+import speech_recognition as sr
+import webbrowser
+
+ia = pyttsx3.init()
+ia.say('Olá Senhor, O que você deseja buscar?')
+ia.setProperty('voice', b'brazil')
+ia.setProperty('rate', 100)
+ia.setProperty('volume', 1)
+ia.runAndWait()
+
+reconhecimento = sr.Recognizer()
+with sr.Microphone() as source:
+    audio = reconhecimento.listen(source)
+    resposta = reconhecimento.recongnize_google(audio, language='pt')
+
+if resposta == "Abra a cotação do Bitcoin":
+    ia.say('ok,abrindo a cotação atual do BTC')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://dolarhoje.com/bitcoin-hoje/')
+elif resposta == 'Abra a mempool':
+    ia.say('ok,abrindo o mempool.space')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://mempool.space/pt/')
+elif resposta == 'Abrir Arbitragem':
+    ia.say('ok,abrindo Arbitragem')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://cointradermonitor.com/arbitragem')
+elif resposta == 'Abrir cotação das criptomoedas':
+    ia.say('ok,abrindo o coinmarketcap')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://coinmarketcap.com/pt-br/')
+elif resposta == 'Abrir Binance':
+    ia.say('ok,abrindo a Binance')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://www.binance.com/pt-BR/')
+elif resposta == 'Comprar Bitcoin':
+    ia.say('ok,abrindo Vendedores P2P')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://catalogop2p.com/')
+elif resposta == 'Comprar Criptomoedas':
+    ia.say('ok,abrindo Vendedores P2P')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://catalogop2p.com/')
+elif resposta == 'Abrir coinbase':
+    ia.say('ok,abrindo coinbase')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://www.coinbase.com/pt/')
+elif resposta == 'Abrir walltime':
+    ia.say('ok,abrindo walltime')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://walltime.info/index_pt.html#!login')
+elif resposta == 'Abrir tradingview':
+    ia.say('ok,abrindo tradingview')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://br.tradingview.com/')
+elif resposta == 'Abrir blockchain.com':
+    ia.say('ok,abrindo blockchain.com ')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://www.blockchain.com/pt/explorer')
+elif resposta == 'Abrir blockchair.com':
+    ia.say('ok,abrindo blockchair.com ')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
+    webbrowser.open('https://blockchair.com/')
+else:
+    ia.say('Desculpe, não entendi o que foi falado')
+    ia.setProperty('voice', b'brazil')
+    ia.setProperty('rate', 135)
+    ia.setProperty('volume', 1)
+    ia.runAndWait()
