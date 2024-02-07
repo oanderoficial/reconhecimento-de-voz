@@ -21,4 +21,5 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pyttsx3 speechrecognition webbrownser 
+        pip install webbrowser pyttsx3 speechrecognition
+
